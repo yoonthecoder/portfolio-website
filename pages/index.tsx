@@ -1,10 +1,11 @@
-import Head from 'next/head'
-import { Figtree } from '@next/font/google'
+import Head from "next/head";
+import { Figtree } from "@next/font/google";
+import Image from "next/image";
 
 const figtree = Figtree({
-  subsets: ['latin'],
-  variable: '--font-figtree'
-})
+  subsets: ["latin"],
+  variable: "--font-figtree",
+});
 
 export default function Home() {
   return (
@@ -15,9 +16,34 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${figtree.variable} font-sans`}>
-       <h1 className='text-yellow'>Yoon Kim</h1>
+      <main
+        className={`${figtree.variable} font-sans flex flex-col justify-center items-center h-screen px-10`}
+      >
+        <div
+          className="text-3xl tracking-tight font-light"
+          style={{ maxWidth: "650px" }}
+        >
+          Hi there! I&apos;m Yoon 👋 - a frontend engineer at{" "}
+          <a
+            className="text-yellow underline hover:opacity-90"
+            href="https://www.balloonbox.io"
+            target="_blank"
+            rel="noreferrer"
+          >
+            BalloonBox.
+          </a>{" "}
+          My website is currently under construction now, and will be back very
+          soon! Please reach out to me via{" "}
+          <a
+            className="text-yellow underline hover:opacity-90"
+            href="mailto:imyoonkim@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            imyoonkim@gmail.com.
+          </a>
+        </div>
       </main>
     </>
-  )
+  );
 }
