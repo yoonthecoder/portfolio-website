@@ -16,7 +16,7 @@ export default function NavBar() {
         <div className="w-3 h-3 bg-green rounded-full" />
       </div>
       <div
-        className={`flex items-center font-light h-12 gap-2 tracking-[-.05em]  w-60 px-5 rounded-t-lg cursor-pointer ${
+        className={`flex items-center font-light h-12 gap-2 tracking-[-.05em] w-60 px-5 rounded-t-lg cursor-pointer ${
           isHome && "bg-background-gray"
         }`}
         onClick={() => router.push("/")}
@@ -26,7 +26,7 @@ export default function NavBar() {
       </div>
       <div
         onClick={() => router.push("/about")}
-        className={`flex items-center font-light h-12 gap-2 tracking-[-.05em]  w-60 px-5 rounded-t-lg cursor-pointer ${
+        className={`flex items-center font-light h-12 gap-2 tracking-[-.05em] w-60 px-5 rounded-t-lg cursor-pointer ${
           !isHome ? "bg-background-gray" : "hover:bg-white/30"
         }`}
       >

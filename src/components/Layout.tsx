@@ -14,10 +14,10 @@ export default function Layout({ children }: any) {
       className={`${figtree.variable} font-sans h-screen bg-background-gray`}
     >
       <NavBar />
-      <main className="flex relative bg-background-gray">
+      <main className="flex bg-background-gray">
         <SideBar />
         <div
-          className="flex flex-col px-10 py-20"
+          className="flex flex-col px-10 py-20 w-full"
           style={{ marginLeft: "300px" }}
         >
           {children}

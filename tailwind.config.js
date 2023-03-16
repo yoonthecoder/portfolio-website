@@ -1,17 +1,29 @@
 /** @type {import('tailwindcss').Config} */
 const {fontFamily} = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    colors: {
-      yellow:'#EAA703'
-    },
+   
     extend: {
       fontFamily: {
-        sans: ['var(--font-figtree)', ...fontFamily.sans],
+        figtree: ["Figtree", "sans-serif"],
+        source: ["Source Sans Pro", "sans-serif"],
+        drukwide: ["Druk Wide Bold", 'sans-serif'],
+        felidae: ["Felidae", "cursive"]
+      },
+      colors: {
+        black:"#555555",
+        red:'#FF514E',
+        yellow:'#EAA703',
+        green:'#0AC046',
+        gray: '#646464',
+        lightblack:"#555555",
+        lightgray:'#EEEEEE',
+        'background-gray':'#FAFAFA',
       },
     },
   },
