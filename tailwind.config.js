@@ -7,7 +7,6 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-   
     extend: {
       fontFamily: {
         figtree: ["Figtree", "sans-serif"],
@@ -16,7 +15,8 @@ module.exports = {
         felidae: ["Felidae", "cursive"]
       },
       colors: {
-        black:"#555555",
+        black:"#3F3F3F",
+        white: "#ffffff",
         red:'#FF514E',
         yellow:'#EAA703',
         green:'#0AC046',

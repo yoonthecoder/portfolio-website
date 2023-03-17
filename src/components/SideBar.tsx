@@ -10,15 +10,17 @@ export default function SideBar() {
   return (
     <aside
       className="fixed h-screen mt-1 px-10 p-20"
-      style={{ minWidth: "300px" }}
+      style={{ minWidth: "250px" }}
     >
       {" "}
       <div className="flex flex-col justify-between h-full border-r border-yellow">
         <Link href="/">
-          <Image src={logo} width={60} height={40} alt="main-logo" />
+          <Image src={logo} width={50} height={40} alt="main-logo" />
         </Link>
         <div className="flex flex-col gap-2">
-          <div className="flex flex-col text-lightblack">Connect with me</div>
+          <div className="flex flex-col text-lightblack tracking-tighter">
+            Connect with me
+          </div>
           <div className="flex gap-3">
             <a
               href="https://www.linkedin.com/in/imyoonkim/"

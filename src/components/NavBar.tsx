@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 export default function NavBar() {
   const router = useRouter();
-  const mainLogo = "/logo.png";
+  const mainLogo = "/images/logo.png";
 
   const isHome = router.asPath === "/";
 
@@ -24,12 +24,18 @@ export default function NavBar() {
         <Image src={mainLogo} width={15} height={15} alt="favicon" />
         Home
       </div>
-      <div
-        onClick={() => router.push("/about")}
-        className={`flex items-center font-light h-12 gap-2 tracking-[-.05em] w-60 px-5 rounded-t-lg cursor-pointer ${
+      {/* <a
+        className={`flex items-center font-light h-12 gap-2 tracking-[-.05em] w-60 px-5 rounded-t-lg cursor-pointer justify-between ${
           !isHome ? "bg-background-gray" : "hover:bg-white/30"
         }`}
+        href="https://read.cv/yoonthecoder"
+        target="_blank"
+        rel="noreferrer"
       >
+        <div className="flex gap-3 ">Resume</div>
+        <div>↗</div>
+      </a> */}
+      <div className="flex items-center font-light h-12 gap-2 tracking-[-.05em] w-60 px-5 rounded-t-lg cursor-pointer justify-between">
         About
       </div>
     </header>

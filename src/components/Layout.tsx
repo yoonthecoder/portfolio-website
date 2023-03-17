@@ -18,7 +18,7 @@ export default function Layout({ children }: any) {
         <SideBar />
         <div
           className="flex flex-col px-10 py-20 w-full"
-          style={{ marginLeft: "300px" }}
+          style={{ marginLeft: "250px" }}
         >
           {children}
         </div>
