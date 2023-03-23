@@ -18,7 +18,8 @@ const figtree = Figtree({
 });
 
 export default function Layout({ children }: any) {
-  const [isDesktop] = useMatchMedia(breakpoints);
+  const [isMobile, isTablet, isDesktop] = useMatchMedia(breakpoints);
+
   return (
     <div
       className={`${figtree.variable} font-sans h-screen bg-background-gray`}
