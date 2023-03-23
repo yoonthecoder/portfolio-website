@@ -1,9 +1,28 @@
 import { useState } from "react";
 
 const ReviewForm = () => {
-  const [nickname, setNickname] = useState();
-  const [message, setMessage] = useState();
-  const handleSubmit = () => {};
+  const [nickname, setNickname] = useState("");
+  const [message, setMessage] = useState("");
+
+  // const handleValidation = () => {
+  //   let formError = {};
+  // };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const res = await fetch("/api/sendgrid", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        nickname: nickname,
+        message: message,
+        subject: `New recommendation has arrived from ${nickname}`,
+      }),
+    });
+
+    const { error } = await res.json();
+    console.log(error);
+  };
   return (
     <>
       {" "}
@@ -25,6 +44,10 @@ const ReviewForm = () => {
             <input
               className="border border-lightgray rounded py-1 px-2 text-sm"
               placeholder="yoonisthebest"
+              value={nickname}
+              onChange={(e) => {
+                setNickname(e.target.value);
+              }}
             />
           </div>
           <div className="flex flex-col gap-1">
@@ -34,13 +57,18 @@ const ReviewForm = () => {
             <textarea
               className="border border-lightgray rounded px-2 py-1 text-sm"
               placeholder="Yoon knows all the good restaurants in town."
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
             />
           </div>
         </form>
-        <input
+        <button
           type="submit"
           className="bg-yellow px-4 text-white tracking-tight rounded-sm py-1 px-2 cursor-pointer"
-        ></input>
+          onClick={(e) => handleSubmit(e)}
+        >
+          Submit
+        </button>
       </div>
     </>
   );

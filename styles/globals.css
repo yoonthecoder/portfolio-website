@@ -52,3 +52,23 @@ body {
   transform: translate(var(--mouse-x), var(--mouse-y));
   text-align: center;
 }
+
+
+.animated-border {
+  display: inline-block;
+}
+
+.animated-border:after {
+  display: block;
+  border-bottom: solid 1px;
+  border-color: '#EAA703';
+  transform: scaleX(0);
+  transform-origin: 0% 50%;
+  transition: transform 250ms ease-in-out;
+  content: '';
+}
+
+.animated-border:hover:after {
+  transform: scaleX(1);
+  padding: 1px;
+}

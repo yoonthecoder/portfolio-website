@@ -15,8 +15,8 @@ module.exports = {
         felidae: ["Felidae", "cursive"]
       },
       colors: {
+        white:'#fff',
         black:"#3F3F3F",
-        white: "#ffffff",
         red:'#FF514E',
         yellow:'#EAA703',
         green:'#0AC046',

@@ -1,6 +1,16 @@
 import Image from "next/image";
-interface ProjectCard {
+import useMatchMedia from "../hooks/useMatchMedia";
+import Button from "./Button";
+import { BUTTON_STYLES } from "./Button";
+
+const breakpoints = [
+  "(max-width: 768px)",
+  "(min-width: 769px) and (max-width: 1199px)",
+  "(min-width: 1200px)",
+];
+interface IProjectCard {
   title: string;
+  text: string;
   tags: Array<String>;
   description: string;
   tools: string;
@@ -9,12 +19,14 @@ interface ProjectCard {
 }
 export default function ProjectCard({
   title,
+  text,
   tags,
   description,
   tools,
   src,
   href,
-}: ProjectCard) {
+}: IProjectCard) {
+  const [isMobile] = useMatchMedia(breakpoints);
   return (
     <div className="bg-white flex rounded-2xl p-1 border border-lightgray p-8 rounded-xl my-5">
       <div className="flex flex-col gap-3">
@@ -22,7 +34,7 @@ export default function ProjectCard({
           {title}
         </h2>
         <div className="flex">
-          {tags.map((tag: string) => (
+          {tags.map((tag: any) => (
             <div
               key={tag}
               className="border tracking-tighter text-sm font-light rounded-3xl px-3 mr-1"
@@ -38,13 +50,13 @@ export default function ProjectCard({
             <Image
               style={{ borderRadius: "0.4rem" }}
               src={src}
-              width={400}
+              width={isMobile ? 600 : 400}
               height={400}
               alt="image"
             />
           </div>
 
-          <div className="w-full md:w-1/2 flex flex-col gap-4 px-2 md:px-5">
+          <div className="w-full md:w-1/2 flex flex-col gap-5 px-2 md:px-5">
             <div className="flex flex-col gap-2 leading-tight tracking-tight">
               <div className="text-yellow">Description</div>
               <div className="text-gray">{description}</div>
@@ -53,10 +65,12 @@ export default function ProjectCard({
               <div className="text-yellow">Tools</div>
               <div className="text-gray">{tools}</div>
             </div>
-            <div className="flex justify-end">
-              <button className="bg-yellow px-4 text-white tracking-tight rounded-sm py-1">
-                Learn more ↗
-              </button>
+            <div className="flex justify-end py-5">
+              <Button
+                text={text}
+                style={BUTTON_STYLES.DEFAULT}
+                buttonOnClick={() => window.open(href, "_target")}
+              />
             </div>
           </div>
         </div>

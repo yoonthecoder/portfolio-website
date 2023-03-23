@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
-
 type MatchedQueries = boolean[];
+import { useEffect, useState } from "react";
 
 const useMatchMedia = (queries: string[]): MatchedQueries => {
   const [matches, setMatches] = useState<MatchedQueries>(
@@ -11,16 +10,14 @@ const useMatchMedia = (queries: string[]): MatchedQueries => {
     if (typeof window === undefined) return;
 
     const mediaQueryLists = queries.map((q) => window.matchMedia(q));
-    const getValues = (): any=> {
-      return mediaQueryLists.map((mql) =>
-        mql.addEventListener("change", handler)
-      );
+    const getValue = (): MatchedQueries => {
+      return mediaQueryLists.map((mql) => mql.matches);
     };
-    const handler = (): void => setMatches(getValues);
+    const handler = (): void => setMatches(getValue);
     mediaQueryLists.forEach((mql) => mql.addEventListener("change", handler));
 
     // get the initial value
-    // setMatches(getValues);
+    setMatches(getValue);
 
     return () => {
       mediaQueryLists.forEach((mql) =>

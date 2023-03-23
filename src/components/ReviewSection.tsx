@@ -7,10 +7,8 @@ const ReviewSection = () => {
     <>
       {" "}
       <Title
-        title="Reviews from colleagues"
-        description={
-          "Some kind and warm words from the awesome people I’ve worked with!"
-        }
+        title="Recommendations"
+        description={"from the awesome people I’ve worked with!"}
       />
       <div className="flex gap-3 overflow-x-scroll py-3 items-start">
         <ReviewCard
@@ -61,7 +59,6 @@ const ReviewSection = () => {
           }
           name="-Ronnie Liu, Head of Operations"
         />
-        <ReviewForm />
       </div>
     </>
   );

@@ -6,7 +6,7 @@ type ReviewCard = {
 const ReviewCard = ({ message, name }: ReviewCard) => {
   return (
     <div
-      className="bg-white w-2/5 text-black flex flex-col flex-shrink-0 justify-center gap-3 border border-lightgray rounded p-10"
+      className="bg-white text-black flex flex-col flex-shrink-0 justify-center gap-3 border border-lightgray rounded p-10"
       style={{ maxWidth: "400px" }}
     >
       <div>{message}</div>

@@ -1,28 +1,14 @@
 import Head from "next/head";
-
-import NavBar from "@/src/components/NavBar";
 import Image from "next/image";
-import ProjectCard from "@/src/components/ProjectCard";
-import Title from "@/src/components/Title";
-import { useEffect } from "react";
-import { useState } from "react";
-import gsap from "gsap";
-import { useLayoutEffect } from "react";
-import useMatchMedia from "@/src/hooks/useMatchMedia";
+import { useRouter } from "next/router";
 import WorkSection from "@/src/components/WorkSection";
 import ReviewSection from "@/src/components/ReviewSection";
+import { BUTTON_STYLES } from "@/src/components/Button";
+import Button from "@/src/components/Button";
 
 export default function Home() {
   const heroImg = "/images/hero-img.svg";
-
-  const breakpoints = [
-    "(max-width: 768px)",
-    "(min-width: 769px) and (max-width: 1199px)",
-    "(min-width: 1200px)",
-  ];
-
-  const [isMobile, isTablet, isDesktop] = useMatchMedia(breakpoints);
-
+  const router = useRouter();
   return (
     <>
       <Head>
@@ -32,18 +18,17 @@ export default function Home() {
         <link rel="icon" href="/images/favicon.ico" />
       </Head>
       <div className="w-full">
-        <div className="flex">
-          <div className="w-1/2 flex flex-col justify-center">
-            <h1 className=" uppercase text-7xl my-5">
+        <div className="flex md:flex-row flex-col">
+          <div className="md:w-1/2 flex flex-col justify-center items-center md:items-start gap-4">
+            <h1 className="uppercase text-6xl md:text-7xl text-center md:text-left">
               {" "}
               <div className="font-drukwide text-yellow">Yoon</div>
               <div className="font-drukwide">Kim</div>
             </h1>
-
-            <h2 className="font-drukwide uppercase text-black">
+            <h2 className="font-drukwide leading-tight uppercase text-center md:text-left text-black">
               A frontend developer <br />
               who loves to{" "}
-              <span className="font-source lowercase text-3xl font-light">
+              <span className="font-source lowercase text-3xl font-light relative">
                 <mark
                   className="bg-yellow/40 inline-block pb-3"
                   style={{ lineHeight: "0rem" }}
@@ -61,8 +46,15 @@ export default function Home() {
                 </mark>
               </span>
             </h2>
+
+            <Button
+              text={`Get to know more! →`}
+              style={BUTTON_STYLES.UNDERLINE}
+              buttonOnClick={() => router.push("/about")}
+            />
           </div>
-          <div className="leading-6 w-1/2">
+
+          <div className="leading-6 md:justify-center md:w-1/2">
             <Image src={heroImg} width={500} height={500} alt="hero-img" />
           </div>
         </div>
