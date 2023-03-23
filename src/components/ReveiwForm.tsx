@@ -8,7 +8,7 @@ const ReviewForm = () => {
   //   let formError = {};
   // };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     const res = await fetch("/api/sendgrid", {
       method: "POST",
@@ -21,7 +21,6 @@ const ReviewForm = () => {
     });
 
     const { error } = await res.json();
-    console.log(error);
   };
   return (
     <>
