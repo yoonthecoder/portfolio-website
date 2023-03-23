@@ -1,6 +1,5 @@
 import Title from "./Title";
 import ReviewCard from "./ReviewCard";
-import ReviewForm from "./ReveiwForm";
 
 const ReviewSection = () => {
   return (
