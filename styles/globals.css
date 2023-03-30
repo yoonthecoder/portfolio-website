@@ -70,5 +70,22 @@ body {
 
 .animated-border:hover:after {
   transform: scaleX(1);
-  padding: 1px;
+}
+
+.perspective {
+  perspective: 1000px;
+}
+
+.mobile-menu .menu-nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+.mobile-menu .menu-nav.open {
+  height: auto;
 }
