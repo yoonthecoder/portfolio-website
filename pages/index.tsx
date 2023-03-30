@@ -5,6 +5,7 @@ import WorkSection from '@/src/components/WorkSection';
 import ReviewSection from '@/src/components/ReviewSection';
 import { BUTTON_STYLES } from '@/src/components/Button';
 import Button from '@/src/components/Button';
+import { ArrowRightIcon } from '@heroicons/react/24/solid';
 
 export default function Home() {
 	const heroImg = '/images/hero-img.svg';
@@ -64,7 +65,12 @@ export default function Home() {
 						</h2>
 
 						<Button
-							text={`Get to know more! →`}
+							text={
+								<div className="flex items-center">
+									<div className="mr-1">Get to know more!</div>
+									<ArrowRightIcon className="h-4 w-4" />
+								</div>
+							}
 							style={BUTTON_STYLES.UNDERLINE}
 							buttonOnClick={() => router.push('/about')}
 						/>

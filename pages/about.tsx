@@ -3,6 +3,7 @@ import React from 'react';
 import Head from 'next/head';
 import Button, { BUTTON_STYLES } from '@/src/components/Button';
 import { useState } from 'react';
+import { ArrowUpRightIcon } from '@heroicons/react/24/solid';
 
 const About = () => {
 	const foreground = '/images/foreground.png';
@@ -58,12 +59,22 @@ const About = () => {
 					<div className="flex gap-3">
 						<Button
 							style={BUTTON_STYLES.UNDERLINE}
-							text="View my resume ↗"
+							text={
+								<div className="flex items-center">
+									<div className="mr-1">View my resume</div>{' '}
+									<ArrowUpRightIcon className="h-4 w-4" />
+								</div>
+							}
 							buttonOnClick={() => (window.open('/Resume_Yoon.pdf'), '_blank')}
 						/>
 						<Button
 							style={BUTTON_STYLES.UNDERLINE}
-							text="Email me ↗"
+							text={
+								<div className="flex items-center">
+									<div className="mr-1">Email me</div>{' '}
+									<ArrowUpRightIcon className="h-4 w-4" />
+								</div>
+							}
 							buttonOnClick={() =>
 								(window.location.href = 'mailto:imyoonkim@gmail.com')
 							}

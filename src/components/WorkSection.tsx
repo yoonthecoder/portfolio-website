@@ -31,7 +31,7 @@ const WorkSection = () => {
 				<ProjectCard
 					title="IcePik"
 					text="Visit the website ↗"
-					tags={['Frontend', 'UX/UI Design', 'Branding']}
+					tags={['Frontend', 'UI Design', 'Branding']}
 					description={
 						<div>
 							IcePik is a user-friendly trading platform where people can buy
