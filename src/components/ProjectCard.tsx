@@ -40,7 +40,7 @@ export default function ProjectCard({
 							{tags.map((tag: any) => (
 								<div
 									key={tag}
-									className="border tracking-tighter text-sm font-light rounded-3xl px-3 mr-1"
+									className="border tracking-tighter text-xs sm:text-sm font-light rounded-3xl px-3 mr-1"
 									style={{ color: '#ABABAB', borderColor: '#DEDEDE' }}
 								>
 									{tag}
@@ -80,13 +80,6 @@ export default function ProjectCard({
 							<div className="text-yellow">Tools</div>
 							<div className="text-gray dark:text-lightgray">{tools}</div>
 						</div>
-						{/* <div className="flex justify-end py-5">
-              <Button
-                text={text}
-                style={BUTTON_STYLES.DEFAULT}
-                buttonOnClick={() => window.open(href, "_target")}
-              />
-            </div> */}
 					</div>
 				</div>
 			</div>
