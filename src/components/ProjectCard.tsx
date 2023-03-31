@@ -19,7 +19,6 @@ interface IProjectCard {
 }
 export default function ProjectCard({
 	title,
-	text,
 	tags,
 	description,
 	tools,
@@ -28,7 +27,7 @@ export default function ProjectCard({
 }: IProjectCard) {
 	const [isMobile] = useMatchMedia(breakpoints);
 	return (
-		<div className="bg-white dark:bg-navbar-darkgray flex rounded-2xl p-1 border border-lightgray dark:border-0 p-8 rounded-xl my-5">
+		<div className="bg-white dark:bg-navbar-darkgray flex rounded-2xl p-1 border border-lightgray dark:border-0 px-5 md:px-8 py-8 rounded-xl my-5">
 			<div className="flex flex-col gap-5">
 				<div className="flex justify-between">
 					<div className="flex flex-col gap-3">

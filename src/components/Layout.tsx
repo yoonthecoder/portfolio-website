@@ -27,7 +27,7 @@ export default function Layout({ children }: any) {
 			<main className="flex bg-background-gray dark:bg-background-dark">
 				{isDesktop && <SideBar />}
 				<div
-					className="flex px-10 py-20 w-full"
+					className="flex px-5 md:px-10 py-20 w-full"
 					style={{ marginLeft: `${isDesktop ? '250px' : '0px'}` }}
 				>
 					{children}

@@ -36,11 +36,17 @@ const MobileNav = () => {
 				} w-full flex text-center items-center z-10 bg-background-gray dark:bg-background-dark`}
 			>
 				<ul className="w-full ">
-					<li className="flex items-center justify-center bg-background-gray dark:bg-background-dark hover:bg-white h-14 dark:hover:bg-navbar-darkgray cursor-pointer">
-						<a onClick={() => handleRoute('/')}>Home</a>
+					<li
+						className="flex items-center justify-center bg-background-gray dark:bg-background-dark hover:bg-white h-14 dark:hover:bg-navbar-darkgray cursor-pointer"
+						onClick={() => handleRoute('/')}
+					>
+						<a>Home</a>
 					</li>
-					<li className="flex items-center justify-center bg-background-gray dark:bg-background-dark dark:hover:bg-navbar-darkgray hover:bg-white  h-14 cursor-pointer">
-						<a onClick={() => handleRoute('/about')}>About</a>
+					<li
+						className="flex items-center justify-center bg-background-gray dark:bg-background-dark dark:hover:bg-navbar-darkgray hover:bg-white h-14 cursor-pointer"
+						onClick={() => handleRoute('/about')}
+					>
+						<a>About</a>
 					</li>
 					<li className="flex items-center justify-center bg-background-gray dark:bg-background-dark py-2">
 						<ThemeToggle />
