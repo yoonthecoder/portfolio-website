@@ -61,7 +61,7 @@ const About = () => {
 							style={BUTTON_STYLES.UNDERLINE}
 							text={
 								<div className="flex items-center">
-									<div className="mr-1">View my resume</div>{' '}
+									<div className="mr-1">Resume</div>{' '}
 									<ArrowUpRightIcon className="h-4 w-4" />
 								</div>
 							}
@@ -94,7 +94,7 @@ const About = () => {
 					<div className="flex">
 						{' '}
 						<div className="text-yellow mt-10 mr-2">
-							{over ? 'thanks for coming by 💛' : 'hover over me for a 🎁'}
+							{over ? 'thanks for coming by 💛' : 'hover over me!'}
 						</div>
 						<Image src={arrow} width={60} height={50} alt="arrow" />
 					</div>

@@ -1,7 +1,5 @@
 import Image from 'next/image';
 import useMatchMedia from '../hooks/useMatchMedia';
-import Button from './Button';
-import { BUTTON_STYLES } from './Button';
 
 const breakpoints = [
 	'(max-width: 768px)',
@@ -27,12 +25,12 @@ export default function ProjectCard({
 }: IProjectCard) {
 	const [isMobile] = useMatchMedia(breakpoints);
 	return (
-		<div className="bg-white dark:bg-navbar-darkgray flex rounded-2xl p-1 border border-lightgray dark:border-0 px-5 md:px-8 py-8 rounded-xl my-5">
+		<div className="bg-white dark:bg-navbar-darkgray flex rounded-2xl p-1 border border-lightgray dark:border-0 px-8 md:px-8 py-10 rounded-xl my-5">
 			<div className="flex flex-col gap-5">
 				<div className="flex justify-between">
 					<div className="flex flex-col gap-3">
 						{' '}
-						<h2 className="font-medium text-2xl tracking-tighter text-black dark:text-lightgray">
+						<h2 className="font-medium' text-2xl tracking-tight text-black dark:text-lightgray">
 							{title}
 						</h2>
 						<div className="flex">
@@ -59,7 +57,10 @@ export default function ProjectCard({
 					</div>
 				</div>
 				<div className="flex flex-col md:flex-row flex-col justify-center items-center gap-5">
-					<div className="flex flex-col gap-4 w-full md:w-1/2">
+					<div
+						className="flex flex-col gap-4 w-full md:w-1/2 cursor-pointer hover:scale-105 duration-300"
+						onClick={() => window.open(href, '_target')}
+					>
 						{' '}
 						<Image
 							style={{ borderRadius: '0.4rem' }}
@@ -71,11 +72,11 @@ export default function ProjectCard({
 					</div>
 
 					<div className="w-full md:w-1/2 flex flex-col gap-5 px-2 md:px-5">
-						<div className="flex flex-col gap-2 leading-tight tracking-tight">
+						<div className="flex flex-col gap-2 leading-tight">
 							<div className="text-yellow">Description</div>
 							<div className="text-gray dark:text-lightgray">{description}</div>
 						</div>
-						<div className="flex flex-col gap-2 tracking-tight">
+						<div className="flex flex-col gap-2">
 							<div className="text-yellow">Tools</div>
 							<div className="text-gray dark:text-lightgray">{tools}</div>
 						</div>

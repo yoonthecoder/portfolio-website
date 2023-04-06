@@ -10,7 +10,7 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				figtree: ['Figtree', 'sans-serif'],
+				sfpro: ['SF Pro', 'sans-serif'],
 				source: ['Source Sans Pro', 'sans-serif'],
 				drukwide: ['Druk Wide Bold', 'sans-serif'],
 				felidae: ['Felidae', 'cursive'],

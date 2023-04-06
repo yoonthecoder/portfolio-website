@@ -1,5 +1,4 @@
 import React from 'react';
-import { Figtree } from '@next/font/google';
 import NavBar from './NavBar';
 import SideBar from './SideBar';
 import useMatchMedia from '../hooks/useMatchMedia';
@@ -11,17 +10,12 @@ const breakpoints = [
 	'(min-width: 1200px)',
 ];
 
-const figtree = Figtree({
-	subsets: ['latin'],
-	variable: '--font-figtree',
-});
-
 export default function Layout({ children }: any) {
 	const [isMobile, isTablet, isDesktop] = useMatchMedia(breakpoints);
 
 	return (
 		<div
-			className={`${figtree.variable} font-sans h-screen bg-background-gray dark:bg-background-dark`}
+			className={`font-sfpro h-screen bg-background-gray dark:bg-background-dark`}
 		>
 			<NavBar />
 			<main className="flex bg-background-gray dark:bg-background-dark">
