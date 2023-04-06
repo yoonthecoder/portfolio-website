@@ -44,7 +44,7 @@ const Button = ({
 			'disabled:opacity-30 disabled:bg-gray-700 cursor-default': isDisabled,
 			'text-white bg-yellow px-4 py-2 rounded-sm hover:opacity-70':
 				style === BUTTON_STYLES.DEFAULT,
-			'text-yellow pr-2 text-left tracking-tight animated-border':
+			'text-yellow pr-2 text-left tracking tight animated-border':
 				style === BUTTON_STYLES.UNDERLINE,
 		},
 		classes?.button || ''

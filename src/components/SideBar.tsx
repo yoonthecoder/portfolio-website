@@ -19,7 +19,7 @@ export default function SideBar() {
 						<Image src={logo} width={50} height={40} alt="main-logo" />
 					</Link>
 					<div className="flex flex-col gap-2">
-						<div className="flex flex-col text-lightblack tracking-tighter dark:text-lightgray">
+						<div className="flex flex-col text-lightblack tracking-tight dark:text-lightgray">
 							Connect with me
 						</div>
 						<div className="flex gap-5">
