@@ -16,7 +16,7 @@ const WorkSection = () => {
 				<ProjectCard
 					title="Hofa Skyline Website"
 					text="Visit the website ↗"
-					tags={['Frontend', 'Web Development', 'Branding', 'Web Design']}
+					tags={['Web Development', 'Branding', 'Web Design']}
 					description={
 						<div>
 							I led the creation of a responsive and engaging website with
