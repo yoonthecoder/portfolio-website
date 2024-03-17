@@ -5,11 +5,78 @@ const WorkSection = () => {
 	const scoreBox = '/images/scorebox.png';
 	const balloonBox = '/images/balloonbox.gif';
 	const icepik = '/images/icepik.png';
+	const turtleApp = '/images/turtle-app.png';
+	const turtleWebsite = '/images/turtle-website.png';
+	const hofa = '/images/hofa.png';
 
 	return (
 		<>
 			<Title title="Featured Work" />
 			<div className="gap-2">
+				<ProjectCard
+					title="Hofa Skyline Website"
+					text="Visit the website ↗"
+					tags={['Frontend', 'Web Development', 'Branding', 'Web Design']}
+					description={
+						<div>
+							I led the creation of a responsive and engaging website with
+							Webflow, expertly weaving their brand identity throughout the
+							design. The project aimed to showcase their construction expertise
+							through a visually striking online platform. By integrating a CMS,
+							I ensured effortless content management, enabling the company to
+							keep the site updated with the latest projects and news. This
+							strategic combination of design and functionality not only
+							enhanced Hofa Skyline&apos;s digital footprint but also aligned
+							seamlessly with their business objectives, providing a perfect
+							balance between visual appeal and user experience.
+						</div>
+					}
+					tools="Webflow, CMS, Google Analytics"
+					src={hofa}
+					href="https://hofa-skyline.webflow.io/"
+				/>
+				<ProjectCard
+					title="Turtle Design Website"
+					text="Visit the website ↗"
+					tags={['Frontend', 'Web Development']}
+					description={
+						<div>
+							I led the revitalization of their marketing website, implementing
+							a new design via Webflow and overseeing the CMS for timely content
+							updates. This ensured the site remained up-to-date with the
+							agency&apos;s latest services. Integrating Google Analytics was
+							key, providing insights that shaped our data-driven optimization
+							strategy, improving user engagement and conversion rates. My focus
+							was on creating a visually striking, easy-to-navigate website that
+							was not only content-rich but also strategically aligned with the
+							agency&apos;s marketing goals through effective content management
+							and analytics.
+						</div>
+					}
+					tools="Webflow, CMS, Google Analytics"
+					src={turtleWebsite}
+					href="https://www.turtle.design"
+				/>
+				<ProjectCard
+					title="Turtle App - Join Flow"
+					text="Visit the website ↗"
+					tags={['Frontend']}
+					description={
+						<div>
+							I developed a multi-step signup experience for the Turtle App-Join
+							Flow, utilizing Next.js, Tailwind CSS, and React Hook Form. This
+							approach streamlined the entry process for designers into the
+							Turtle Network, featuring smooth state management for flawless
+							step transitions and rigorous form validation to ensure precision.
+							Aimed at delivering a seamless registration journey, the design
+							focused on user engagement and ease, effectively connecting
+							designers with opportunities in the Turtle Network.
+						</div>
+					}
+					tools="Next.js, Tailwind CSS, React Hook Form, State Management, Google Analytics"
+					src={turtleApp}
+					href="https://www.turtle.app/join"
+				/>
 				<ProjectCard
 					title="ScoreBox 🥇🥈"
 					text="Learn more ↗"
@@ -66,7 +133,6 @@ const WorkSection = () => {
 					}
 					tools="Webflow, Figma, Google Analytics"
 					src={balloonBox}
-					href="https://www.balloonbox.io/"
 				/>
 			</div>
 		</>

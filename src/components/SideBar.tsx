@@ -29,7 +29,7 @@ export default function SideBar() {
 								rel="noreferrer"
 								className="hover:opacity-80"
 							>
-								<Image src={linkedin} width={25} height={25} alt="linkedin" />
+								<Image src={linkedin} width={20} height={20} alt="linkedin" />
 							</a>
 							<a
 								href="https://github.com/yoonthecoder"
@@ -37,7 +37,7 @@ export default function SideBar() {
 								rel="noreferrer"
 								className="hover:opacity-80"
 							>
-								<Image src={github} width={25} height={25} alt="linkedin" />
+								<Image src={github} width={20} height={20} alt="linkedin" />
 							</a>
 							<a
 								href="https://www.instagram.com/yoonthecoder/"
@@ -45,7 +45,7 @@ export default function SideBar() {
 								rel="noreferrer"
 								className="hover:opacity-80"
 							>
-								<Image src={instagram} width={25} height={25} alt="linkedin" />
+								<Image src={instagram} width={20} height={20} alt="linkedin" />
 							</a>
 						</div>
 					</div>

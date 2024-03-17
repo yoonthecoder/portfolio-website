@@ -21,7 +21,7 @@ const About = () => {
 			<div className="flex md:flex-row flex-col items-center justify-center py-10">
 				<div className="md:w-1/2 flex flex-col gap-5 px-3">
 					<h2 className="font-bold tracking-tight text-4xl text-yellow">
-						Annyeonghaseyo! 👋
+						Hi there 👋
 					</h2>
 					<div className="text-black dark:text-lightgray text-md">
 						<p className="pb-3">
