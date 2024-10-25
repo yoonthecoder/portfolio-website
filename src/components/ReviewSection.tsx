@@ -3,7 +3,7 @@ import ReviewCard from './ReviewCard';
 
 const ReviewSection = () => {
 	return (
-		<>
+		<div className="col-span-12">
 			{' '}
 			<Title
 				title="Recommendations"
@@ -59,7 +59,7 @@ const ReviewSection = () => {
 					name="-Ronnie Liu, Head of Operations"
 				/>
 			</div>
-		</>
+		</div>
 	);
 };
 

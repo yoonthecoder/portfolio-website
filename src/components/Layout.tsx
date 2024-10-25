@@ -3,6 +3,7 @@ import NavBar from './NavBar';
 import SideBar from './SideBar';
 import useMatchMedia from '../hooks/useMatchMedia';
 import Footer from './Footer';
+import { Figtree } from '@next/font/google';
 
 const breakpoints = [
 	'(max-width: 768px)',
@@ -10,19 +11,22 @@ const breakpoints = [
 	'(min-width: 1200px)',
 ];
 
+const figtree = Figtree({ subsets: ['latin'] });
+
 export default function Layout({ children }: any) {
 	const [isMobile, isTablet, isDesktop] = useMatchMedia(breakpoints);
-
 	return (
 		<div
-			className={`font-sfpro h-screen bg-background-gray dark:bg-background-dark`}
+			className={`h-screen bg-background-gray dark:bg-background-dark ${figtree.className}`}
 		>
 			<NavBar />
-			<main className="flex bg-background-gray dark:bg-background-dark">
-				{isDesktop && <SideBar />}
+			<main
+				className={`flex max-w-7xl mx-auto bg-background-gray dark:bg-background-dark`}
+			>
+				{/* {isDesktop && <SideBar />} */}
 				<div
 					className="flex px-5 md:px-10 py-20 w-full"
-					style={{ marginLeft: `${isDesktop ? '250px' : '0px'}` }}
+					// style={{ marginLeft: `${isDesktop ? '250px' : '0px'}` }}
 				>
 					{children}
 				</div>

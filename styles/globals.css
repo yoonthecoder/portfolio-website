@@ -17,46 +17,10 @@
   }
 }
 
-@font-face {
-  font-family: 'Druk Wide Bold';
-  src: url('../public/fonts/Druk\ Wide\ Bold.ttf');
-}
-
-@font-face {
-  font-family: 'Felidae';
-  src: url('../public/fonts/Felidae.ttf');
-}
-
-@font-face {
-  font-family: 'SF-Pro';
-  src: url('../public/fonts/SF-Pro-Text-Light.otf') format('ttf');
-  font-weight: 300;
-  }
-
-@font-face {
-font-family: 'SF-Pro';
-src: url('../public/fonts/SF-Pro.ttf') format('ttf');
-font-weight: 400;
-}
-
-@font-face {
-  font-family: 'SF-Pro';
-  src: url('../public/fonts/SF-Pro-Text-Medium.otf') format('otf');
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: 'SF-Pro';
-  src: url('../public/fonts/SF-Pro-Text-Semibold.otf') format('otf');
-  font-weight: 600;
-}
-
-  
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: 'SF-Pro', sans-serif;
 }
 
 html,

@@ -20,70 +20,23 @@ export default function Home() {
 				<link rel="icon" href="/images/favicon.ico" />
 			</Head>
 
-			<div className="w-full">
-				<div className="flex md:flex-row flex-col">
-					<div className="md:w-1/2 flex flex-col justify-center items-center md:items-start gap-4">
-						<h1 className="uppercase text-6xl md:text-7xl text-center md:text-left">
-							{' '}
-							<div className="font-drukwide text-yellow">Yoon</div>
-							<div className="font-drukwide">Kim</div>
-						</h1>
-						<h2 className="font-drukwide leading-tight uppercase text-center md:text-left text-black dark:text-lightgray">
-							A frontend developer <br />
-							who loves to{' '}
-							<div
-								className="container bg-yellow absolute z-10"
-								style={{
-									top: '40%',
-									left: '50%',
-								}}
-							>
-								<div className="slot pespective"></div>
-							</div>
-							<button className="code font-source lowercase text-3xl font-light relative">
-								<mark
-									className="bg-yellow/40 dark:bg-yellow/70 inline-block pb-3 dark:text-lightgray"
-									style={{ lineHeight: '0rem' }}
-								>
-									code
-								</mark>
-							</button>{' '}
-							and{' '}
-							<button
-								className="design lowercase text-3xl"
-								onClick={() => {
-									console.log('design clicked');
-								}}
-							>
-								<mark
-									className="bg-yellow/40 dark:bg-yellow/70 inline-block pb-3 font-felidae dark:text-lightgray"
-									style={{ lineHeight: '0rem' }}
-								>
-									design.
-								</mark>
-							</button>
-						</h2>
-
-						<Button
-							text={
-								<div className="flex items-center">
-									<div className="mr-1">Get to know more!</div>
-									<ArrowRightIcon className="h-4 w-4" />
-								</div>
-							}
-							style={BUTTON_STYLES.UNDERLINE}
-							buttonOnClick={() => router.push('/about')}
-						/>
-					</div>
-
-					<div className="leading-6 md:justify-center md:w-1/2">
+			<div className="md:max-w-7xl mx-auto flex items-center justify-center">
+				<div>
+					<h1 className="uppercase font-extrabold tracking-tighter text-6xl md:text-7xl text-center md:text-left text-yellow">
+						Yoon Kim
+					</h1>
+					<h2 className="font-semibold text-black">
+						A frontend developer who loves to code and design
+					</h2>
+				</div>
+				<div>
+					<div className="leading-6">
 						<Image src={heroImg} width={500} height={500} alt="hero-img" />
 					</div>
 				</div>
-				<div className="flex flex-col gap-5">
-					<WorkSection />
-					<ReviewSection />
-				</div>
+
+				{/* <WorkSection />
+				<ReviewSection /> */}
 			</div>
 		</>
 	);

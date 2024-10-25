@@ -11,14 +11,12 @@ const ThemeToggle = () => {
 	return (
 		<button onClick={() => setTheme(theme !== 'dark' ? 'dark' : 'light')}>
 			{theme !== 'dark' ? (
-				<div className="py-2 px-3 bg-white rounded-3xl flex gap-2 items-center hover:bg-black/20">
-					<MoonIcon className="text-black h-5 w-5" />
-					Dark
+				<div className="py-2 px-3 bg-white border border-lightgray rounded-3xl flex gap-2 items-center hover:bg-black/20">
+					<MoonIcon className="text-yellow h-5 w-5" />
 				</div>
 			) : (
 				<div className="py-2 px-3 bg-navbar-darkgray rounded-3xl flex gap-2 items-center hover:bg-white/20">
-					<SunIcon className="text-lightgray h-5 w-5" />
-					Light
+					<SunIcon className="text-yellow h-5 w-5" />
 				</div>
 			)}
 		</button>

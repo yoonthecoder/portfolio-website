@@ -10,7 +10,7 @@ const WorkSection = () => {
 	const hofa = '/images/hofa.png';
 
 	return (
-		<>
+		<div>
 			<Title title="Featured Work" />
 			<div className="gap-2">
 				<ProjectCard
@@ -135,7 +135,7 @@ const WorkSection = () => {
 					src={balloonBox}
 				/>
 			</div>
-		</>
+		</div>
 	);
 };
 
