@@ -5,10 +5,12 @@ import { ThemeProvider } from 'next-themes';
 import Script from 'next/script';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
+
 import * as gtag from '../lib/gtag';
 
 export default function App({ Component, pageProps }: AppProps) {
 	const router = useRouter();
+
 	useEffect(() => {
 		const handleRouteChange = (url: string) => {
 			gtag.pageview(url);
