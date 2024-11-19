@@ -65,7 +65,7 @@ const About = () => {
 									<ArrowUpRightIcon className="h-4 w-4" />
 								</div>
 							}
-							buttonOnClick={() => (window.open('/Resume_Yoon.pdf'), '_blank')}
+							buttonOnClick={() => (window.open('/Resume-YKim.pdf'), '_blank')}
 						/>
 						<Button
 							style={BUTTON_STYLES.UNDERLINE}
@@ -81,24 +81,7 @@ const About = () => {
 						/>
 					</div>
 				</div>
-				<div className="md:w-1/2 flex flex-col items-center justify-center">
-					<Image
-						src={over ? background : foreground}
-						width={350}
-						height={400}
-						alt="headshot"
-						className="cursor-pointer"
-						onMouseOver={() => setOver(true)}
-						onMouseOut={() => setOver(false)}
-					/>
-					<div className="flex">
-						{' '}
-						<div className="text-yellow mt-10 mr-2">
-							{over ? 'thanks for coming by 💛' : 'hover over me!'}
-						</div>
-						<Image src={arrow} width={60} height={50} alt="arrow" />
-					</div>
-				</div>
+				<div className="md:w-1/2 flex flex-col items-center justify-center"></div>
 			</div>
 		</>
 	);

@@ -1,0 +1,13 @@
+fragment ProjectsParts on Projects {
+  __typename
+  title
+  overview
+  tools
+  summary
+  tags
+  projectImages {
+    __typename
+    src
+    altText
+  }
+}

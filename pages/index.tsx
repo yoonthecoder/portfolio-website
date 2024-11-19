@@ -6,6 +6,7 @@ import ReviewSection from '@/src/components/ReviewSection';
 import { BUTTON_STYLES } from '@/src/components/Button';
 import Button from '@/src/components/Button';
 import { ArrowRightIcon } from '@heroicons/react/24/solid';
+import { emojiBlast } from 'emoji-blast';
 
 export default function Home() {
 	const heroImg = '/images/hero-img.svg';
@@ -24,12 +25,11 @@ export default function Home() {
 				<div className="flex md:flex-row flex-col">
 					<div className="md:w-1/2 flex flex-col justify-center items-center md:items-start gap-4">
 						<h1 className="uppercase text-6xl md:text-7xl text-center md:text-left">
-							{' '}
 							<div className="font-drukwide text-yellow">Yoon</div>
 							<div className="font-drukwide">Kim</div>
 						</h1>
 						<h2 className="font-drukwide leading-tight uppercase text-center md:text-left text-black dark:text-lightgray">
-							A frontend developer <br />
+							A frontend engineer <br />
 							who loves to{' '}
 							<div
 								className="container bg-yellow absolute z-10"
@@ -40,7 +40,20 @@ export default function Home() {
 							>
 								<div className="slot pespective"></div>
 							</div>
-							<button className="code font-source lowercase text-3xl font-light relative">
+							<button
+								className="code font-source lowercase text-3xl font-light"
+								onMouseEnter={(e) => {
+									const target = e.target as HTMLElement;
+									const rect = target.getBoundingClientRect();
+									emojiBlast({
+										emojis: ['👩🏻‍💻'],
+										position: {
+											x: rect.left + rect.width / 2, // Center of the button
+											y: rect.top + rect.height / 2, // Center of the button
+										},
+									});
+								}}
+							>
 								<mark
 									className="bg-yellow/40 dark:bg-yellow/70 inline-block pb-3 dark:text-lightgray"
 									style={{ lineHeight: '0rem' }}
@@ -51,8 +64,16 @@ export default function Home() {
 							and{' '}
 							<button
 								className="design lowercase text-3xl"
-								onClick={() => {
-									console.log('design clicked');
+								onMouseEnter={(e) => {
+									const target = e.target as HTMLElement;
+									const rect = target.getBoundingClientRect();
+									emojiBlast({
+										emojis: ['🎨'],
+										position: {
+											x: rect.left + rect.width / 2, // Center of the button
+											y: rect.top + rect.height / 2, // Center of the button
+										},
+									});
 								}}
 							>
 								<mark
@@ -67,7 +88,7 @@ export default function Home() {
 						<Button
 							text={
 								<div className="flex items-center">
-									<div className="mr-1">Get to know more!</div>
+									<div className="mr-1">Get to know more</div>
 									<ArrowRightIcon className="h-4 w-4" />
 								</div>
 							}

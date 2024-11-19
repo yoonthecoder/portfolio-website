@@ -11,6 +11,7 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				sfpro: ['SF Pro', 'sans-serif'],
+				figtree: ['Figtree', 'sans-serif'],
 				source: ['Source Sans Pro', 'sans-serif'],
 				drukwide: ['Druk Wide Bold', 'sans-serif'],
 				felidae: ['Felidae', 'cursive'],

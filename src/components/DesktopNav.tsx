@@ -21,7 +21,7 @@ const DesktopNav = () => {
 			<div className="flex justify-between w-full items-center">
 				<div className="flex">
 					<div
-						className={`flex items-center font-light gap-2 tracking-[-.05em] w-60 px-5 rounded-t-lg cursor-pointer ${
+						className={`flex items-center font-light gap-2 tracking-[-.05em] w-60 px-5 rounded-t-lg cursor-pointer hover:dark:bg-background-dark/80 hover:bg-background-gray ${
 							isHome && 'bg-background-gray dark:bg-background-dark'
 						}`}
 						style={{ height: '48px' }}
@@ -33,7 +33,7 @@ const DesktopNav = () => {
 						Home
 					</div>
 					<div
-						className={`flex items-center font-light gap-2 tracking-[-.05em] w-60 px-5 rounded-t-lg cursor-pointer ${
+						className={`flex items-center font-light gap-2 tracking-[-.05em] w-60 px-5 rounded-t-lg cursor-pointer hover:dark:bg-background-dark/80 hover:bg-background-gray ${
 							!isHome && 'bg-background-gray dark:bg-background-dark'
 						}`}
 						style={{ height: '48px' }}
