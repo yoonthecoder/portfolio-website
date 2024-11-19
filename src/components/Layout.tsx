@@ -17,7 +17,7 @@ export default function Layout({ children }: any) {
 	const [isMobile, isTablet, isDesktop] = useMatchMedia(breakpoints);
 
 	return (
-		<div className={`h-screen bg-background-gray dark:bg-background-dark `}>
+		<div className={`h-screen bg-background-gray dark:bg-background-dark`}>
 			<NavBar />
 			<main
 				className={`flex bg-background-gray dark:bg-background-dark ${figtree.className}`}

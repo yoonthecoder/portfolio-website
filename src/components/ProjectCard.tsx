@@ -82,7 +82,9 @@ export default function ProjectCard({
 						</div>
 						<div className="flex flex-col gap-2">
 							<div className="text-yellow">Tools</div>
-							<div className="text-gray dark:text-lightgray">{tools}</div>
+							<div className="text-gray dark:text-lightgray font-light">
+								{tools}
+							</div>
 						</div>
 					</div>
 				</div>
