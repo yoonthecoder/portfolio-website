@@ -39,14 +39,6 @@ export default function SideBar() {
 							>
 								<Image src={github} width={20} height={20} alt="linkedin" />
 							</a>
-							<a
-								href="https://www.instagram.com/yoonthecoder/"
-								target="_blank"
-								rel="noreferrer"
-								className="hover:opacity-80"
-							>
-								<Image src={instagram} width={20} height={20} alt="linkedin" />
-							</a>
 						</div>
 					</div>
 				</div>

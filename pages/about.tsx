@@ -18,7 +18,7 @@ const About = () => {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/images/favicon.ico" />
 			</Head>
-			<div className="flex md:flex-row flex-col items-center justify-center py-10">
+			<div className="flex md:flex-row flex-col items-center justify-center py-10 w-full gap-10">
 				<div className="md:w-1/2 flex flex-col gap-5 px-3">
 					<h2 className="font-bold tracking-tight text-4xl text-yellow">
 						Hi there 👋
@@ -27,34 +27,35 @@ const About = () => {
 						<p className="pb-3">
 							I’m Yoon (a.k.a.{' '}
 							<a
-								href="https://www.instagram.com/yoonthecoder"
+								href="https://yoonthecoder.hashnode.dev/"
 								target="_blank"
 								rel="noreferrer"
 								className="text-yellow underline hover:opacity-70"
 							>
 								yoonthecoder
 							</a>
-							), a frontend developer who is originally from Korea, but
-							currently based in Vancouver, BC. While I initially started out on
-							a path in Education, I quickly discovered that my true passions
-							lay in the world of tech. So, I taught myself to code and now
-							I&apos;m living my dream as a developer! With a keen interest in
-							both design and coding, I love getting creative with my work and
-							always strive to create websites and applications that are not
-							only functional, but also visually stunning.
+							), a frontend developer based in Vancouver, BC. I’m passionate
+							about building websites and apps that not only work seamlessly but
+							also look amazing. I love combining design and code to create
+							things that people genuinely enjoy using. For me, being a
+							developer is about more than just writing code - it&apos;s about
+							solving problems and creating solutions that make an impact.
+							I&apos;m always working to become a well-rounded engineer who can
+							think beyond the technical side and contribute real business value
+							to every project I work on.
 						</p>
 						<p className="pb-3">
-							I also love to share my knowledge and experiences with others in
-							the developer community. I recently started to create informative
-							content on various platforms, so that other developers can learn
-							from my tips and tricks and stay motivated with some inspirational
-							quotes.
-						</p>{' '}
+							I&apos;m also big on giving back to the developer community.
+							Whether it&apos;s mentoring junior developers or sharing tips,
+							tricks, and inspiration online, I love helping others grow and
+							succeed in their coding journey.
+						</p>
 						<p>
-							When I&apos;m not glued to my laptop, you can catch me on the
-							mountains hitting the slopes and soaking up some nature. It&apos;s
-							my way of recharging my batteries!
-						</p>{' '}
+							When I&apos;m not at my desk, you&apos;ll probably find me
+							spending time with my dogs (I&apos;m a huge dog lover!), hitting
+							the slopes, or exploring the mountains around Vancouver. Being
+							outdoors is my way of recharging and staying inspired.
+						</p>
 					</div>
 					<div className="flex gap-3">
 						<Button
@@ -81,7 +82,14 @@ const About = () => {
 						/>
 					</div>
 				</div>
-				<div className="md:w-1/2 flex flex-col items-center justify-center"></div>
+				<div className="md:w-1/2 flex justify-center">
+					<Image
+						src="/images/about.png"
+						width={400}
+						height={400}
+						alt={'about'}
+					/>
+				</div>
 			</div>
 		</>
 	);
