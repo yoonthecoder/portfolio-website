@@ -21,10 +21,9 @@ const WorkSection = () => {
 						<div>
 							<ul className="list-disc pl-5">
 								<li>
-									<strong>Built</strong> a multi-step signup flow for the Turtle
-									App Join process using <strong>Next.js</strong>,{' '}
-									<strong>Tailwind CSS</strong>, and{' '}
-									<strong>React Hook Form</strong>.
+									Built a multi-step signup flow for the Turtle App Join process
+									using <strong>Next.js</strong>, <strong>Tailwind CSS</strong>,
+									and <strong>React Hook Form</strong>.
 								</li>
 								<li>
 									Implemented <strong>state management</strong> for smooth step
