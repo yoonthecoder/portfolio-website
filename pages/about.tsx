@@ -52,9 +52,9 @@ const About = () => {
 						</p>
 						<p>
 							When I&apos;m not at my desk, you&apos;ll probably find me
-							spending time with my dogs (I&apos;m a huge dog lover!), hitting
-							the slopes, or exploring the mountains around Vancouver. Being
-							outdoors is my way of recharging and staying inspired.
+							spending time with my pup, hitting the slopes, or exploring the
+							mountains and lakes around Vancouver. Being outdoors is my way of
+							recharging and staying inspired!
 						</p>
 					</div>
 					<div className="flex gap-3">
